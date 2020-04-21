@@ -27,11 +27,11 @@
 			<a href="" id="texto-cambiante">Registrarse</a>
 	    </nav>
     </header>
-    <div class="container contenido content" >
+    <div id="contenido-principal" class="container contenido content" >
         <div  class="row">
             <div class="contenedor col-md-8">
                 <img id="img-vestido" src="img/vestido.jpg" alt="vestido">
-                <h2>EL nombre del vestido</h2>
+                <h2>El nombre del vestido</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis quisquam dolore quae corrupti quia nam incidunt praesentium excepturi nisi, quidem non delectus quis, labore totam odit, iure saepe placeat harum!</p>
             </div>
             <div id="contenedor-login" class="contenedor col-md-4">
@@ -39,12 +39,7 @@
             </div>
         </div>
     </div>
-        <footer class="contenido">
-            <p id="tel-contacto">Telefono: 273 - 000 - 00 - 00</p>            
-            <img class="icono-footer" src="img/facebook.png" alt="">
-            <img class="icono-footer" src="img/twitter.png." alt="">
-            <img class="icono-footer" src="img/instagram.png" alt="">
-        </footer>
+    <?php include_once("footer.html") ?>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
