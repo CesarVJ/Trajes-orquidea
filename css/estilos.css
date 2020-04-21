@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    height: 100%;
+    background-color: black;
+}
+
+.fondo {
+    background-image: url(../img/fondo4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    filter: grayscale(80%);
+}
+
+header {
+    background: black;
+}
+
+.menu {
+    background-color: black;
+    width: 100%;
+    align-items: center;
+    padding: 1.3rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: none;
+}
+
+.nav {
+    width: 500px;
+    margin: 0px auto;
+    margin-top: 100px;
+    box-shadow: -4px -3px 21px 8px rgba(255, 255, 255, 0.2);
+}
+
+#texto-cambiante {
+    margin-left: 75%;
+}
+
+#contenedor-login {
+    width: 500px;
+    height: 300px;
+    margin: 0px auto;
+    /* background-color: rgba(255, 183, 71, 0.5);*/
+    background-color: #fff;
+    padding: 2% 2% 2% 2%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: -4px -3px 21px 8px rgba(255, 255, 255, 0.2);
+}
+
+.contenido {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 99900;
+}
+
+.content {
+    padding-top: 10rem;
+}
+
+.formulario {
+    width: 100%;
+}
+
+/*Mensajes de error*/
+.grupo-error {
+    text-align: left;
+    margin: 1px 25px;
+}
+
+.mensaje-error {
+    color: red;
+    text-align: left;
+}
+
+.icono-error {
+    filter: invert(27%) sepia(51%) saturate(2878%) contrast(97%);
+    float: left;
+}
+
+#error-correo,
+#error-contraseña,
+#error-registro {
+    display: none;
+}
+
+.item-inicio {
+    width: 90%;
+    font-size: 20px;
+    padding: 6px;
+    padding-left: 52px;
+    margin: 4px auto;
+    background-color: #ededed;
+    color: black;
+    border-radius: 5px;
+}
+
+.icono {
+    width: 42px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.item-inicio:focus,
+.item:focus {
+    outline: 0px;
+}
+
+.boton {
+    display: block;
+    width: 90%;
+    padding: 8px;
+    background: #ffa41b;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.texto {
+    color: black;
+    font-size: 1.2rem;
+    font-family: 'Poppins', 'Lucida Sans';
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    margin-top: 8px;
+}
+
+#img-vestido {
+    width: 30%;
+    height: 90%;
+    float: left;
+    margin-right: 25px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    align-items: center;
+}
+
+#tel-contacto {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+
+.icono-footer {
+    height: 35px;
+    margin-bottom: 30px;
+    margin-right: 1%;
+}
