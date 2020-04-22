@@ -25,8 +25,8 @@ function validarRegistro() {
         return false;
     }
 
-    if (contraseña.length < 8) {
-        mensajeError.innerHTML = "La contraseña debe ser de al menos 8 caracteres.";
+    if (contraseña.length < 4) {
+        mensajeError.innerHTML = "La contraseña debe ser de al menos 4 caracteres.";
         registro_error.style.display = "block";
         return false;
     }
