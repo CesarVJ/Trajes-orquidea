@@ -13,6 +13,7 @@ include_once('modelo/Usuario.php');
 
     }*/
 
+
     if (isset($_POST["contraseña"]) && !empty($_POST["contraseña"]) &&
          isset($_POST["correo"]) && !empty($_POST["correo"])){
             $correo = $_POST["correo"];
@@ -32,8 +33,7 @@ include_once('modelo/Usuario.php');
                         $_SESSION["tipo"] = "Administrador";
                     else
                         $_SESSION["tipo"] = "Cliente";
-                }
-                else{
+                }else{
                     $sErr = "Usuario desconocido";
                 }
             }catch(Exception $error){
@@ -46,9 +46,9 @@ include_once('modelo/Usuario.php');
     	
 	if ($sErr == ""){
         if($_SESSION["tipo"] == "Administrador"){
-            header("Location: inicio.php");
+            header("location: CatalogoAdmin.php");
         }else if($_SESSION["tipo"] == "Cliente"){
-            header("Location: inicio2.php");
+            header("location: CatalogoCliente.php");
         }
     }else{
         header("Location: error.php?sError=".$sErr);

@@ -38,7 +38,8 @@
 				        <img class="icono" id="calendario" src="img/calendario.svg" alt="calendario">
 				        <input type="date" name="fecha_nacimiento" class="item">
 				        <input type="email" id="correo" name="correo" class="item" placeholder="Correo">
-			        </div>			
+			        </div>	
+					<input type="text" name="direccion" class="item" placeholder="Direccion">		
 			        <input type="tel" name="telefono" class="item" placeholder="271-000-00-00">
 			        <input type="password" name="contraseña" class="item" placeholder="Contraseña">
 			        <input type="password" name="confirmar_contraseña" class="item" placeholder="Confirmar contraseña">
