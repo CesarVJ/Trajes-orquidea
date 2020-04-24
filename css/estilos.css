@@ -15,7 +15,19 @@ body {
     left: 0;
     right: 0;
     display: block;
-    filter: grayscale(80%);
+    filter: grayscale(60%);
+}
+
+
+
+#img-vestido {
+    width: 40%;
+    height: 80%;
+    float: left;
+    margin-right: 25px;
+    border-radius: 5px;
+    box-shadow: -25px 13px 28px -10px rgba(0, 0, 0, 0.47);
+
 }
 
 header {
@@ -49,6 +61,25 @@ header {
 
 #texto-cambiante {
     margin-left: 75%;
+}
+
+#titulo-principal {
+    font-family: 'Poppins';
+    color: white;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+
+#descripcion-principal {
+    font-family: 'Poppins';
+    color: white;
+    margin-top: 2rem;
+    margin-right: 10px;
+    font-weight: 400;
+    line-height: 2;
+    font-size: 1.3rem;
+    text-align: justify;
 }
 
 #contenedor-login,
@@ -134,13 +165,19 @@ header {
 
 .boton {
     display: block;
-    width: 90%;
+    width: 95%;
     padding: 8px;
-    background: #ffa41b;
+    background: #61d4b3;
     color: white;
     font-weight: bold;
     border-radius: 5px;
-    margin: 20px auto;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.btn-iniciar {
+    margin-top: 20px;
+    background-color: #fb8d62;
 }
 
 .texto {
@@ -153,12 +190,7 @@ header {
     margin-top: 8px;
 }
 
-#img-vestido {
-    width: 30%;
-    height: 90%;
-    float: left;
-    margin-right: 25px;
-}
+
 
 footer {
     background-color: #000;

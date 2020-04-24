@@ -8,7 +8,7 @@
         $conexion = abrirConexion();
         $existeUsuario = false;
         if(empty(trim($_POST["nombre"])) || empty(trim($_POST["fecha_nacimiento"])) || empty(trim($_POST["correo"])) || empty(trim($_POST["contraseña"]))){
-
+            $error ="Faltan datos";
         }else{
             $consulta = "select correo from usuarios where correo = ?";
             if($statement = mysqli_prepare($conexion, $consulta)){
@@ -26,8 +26,6 @@
                         $telefono = trim($_POST["telefono"]);
                         $direccion = trim($_POST["direccion"]);
                         echo "todo bien";
-
-
                     }
                 }else{
                     echo "Ah ocurrido un error! :(";
@@ -51,8 +49,6 @@
         echo "Paso";
         echo $correo;
         echo $contraseña;
-
-
         if(!empty($correo) && !empty($contraseña) && !empty($confirmar_contraseña) && !$existeUsuario){
             echo "Paso 1";
             $consulta = "insert into usuarios(id_usuario, Nombre, fecha_nacimiento, correo, direccion, telefono, contraseña) values(?, ?, ?, ?, ?, ?, ?)";
