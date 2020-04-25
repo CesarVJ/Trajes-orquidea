@@ -18,16 +18,17 @@ body {
     filter: grayscale(60%);
 }
 
-
+.contenedor-vestido {
+    text-align: center;
+    padding: 0px;
+}
 
 #img-vestido {
-    width: 40%;
-    height: 80%;
-    float: left;
-    margin-right: 25px;
+    width: 80%;
+    height: 90%;
+    margin: 10px auto;
     border-radius: 5px;
     box-shadow: -25px 13px 28px -10px rgba(0, 0, 0, 0.47);
-
 }
 
 header {
@@ -37,6 +38,7 @@ header {
 .menu {
     background-color: black;
     width: 100%;
+    max-width: 100%;
     align-items: center;
     padding: 1.3rem;
 }
@@ -77,7 +79,7 @@ header {
     margin-top: 2rem;
     margin-right: 10px;
     font-weight: 400;
-    line-height: 2;
+    line-height: 1.7;
     font-size: 1.3rem;
     text-align: justify;
 }
@@ -86,7 +88,7 @@ header {
 #contenedor-registro {
     width: 500px;
     height: 100%;
-    margin: 10px auto;
+    margin: 0px auto;
     background-color: #fff;
     padding: 2% 2% 2% 2%;
     border-radius: 10px;
@@ -100,18 +102,23 @@ header {
 }
 
 .contenido {
-    position: fixed;
+    position: relative;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .content {
-    margin-top: 10rem;
+    margin-top: 5.5rem;
 }
 
-#contenido-principal {
+.contenido-principal {
     margin-top: 6rem;
+}
+
+#contenido-principal-registro {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .formulario {
@@ -190,17 +197,21 @@ header {
     margin-top: 8px;
 }
 
-
-
 footer {
     background-color: #000;
     color: #fff;
-    position: absolute;
     bottom: 0;
     width: 100%;
     height: 70px;
     text-align: center;
     align-items: center;
+    margin-bottom: 0px;
+    padding: 0px;
+
+    position: relative;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 #tel-contacto {
@@ -212,7 +223,7 @@ footer {
 
 .icono-footer {
     height: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     margin-right: 1%;
 }
 
@@ -276,4 +287,36 @@ input[type=date] {
 #error-contraseña,
 #error-registro {
     display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    footer {
+        margin-top: 3rem;
+        width: 100%;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    #img-vestido {
+        display: block;
+    }
+
+    .contenedor-texto {
+        text-align: center;
+    }
+
+    #texto-cambiante {
+        margin-left: 60%;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    #texto-cambiante {
+        margin-left: 60%;
+    }
 }

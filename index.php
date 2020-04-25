@@ -29,16 +29,20 @@
             <a href="paginaRegistro.php" id="texto-cambiante">Registrarse</a>
         </nav>
     </header>
-    <div class="container contenido content">
+    <div class="contenido content container">
         <div class="row">
-            <div class="contenedor col-md-8">
+            <div class="contenedor contenedor-vestido col-lg-4 col-md-6 col-sm-12">
                 <img id="img-vestido" src="img/vestido.jpg" alt="vestido">
-                <h2 id="titulo-principal">Vestido tipico de Chocaman</h2>
+            </div>
+
+            <div class="contenedor contenedor-texto col-lg-4 col-md-6 col-sm-12">
+            <h2 id="titulo-principal">Vestido tipico de Chocaman</h2>
                 <p id="descripcion-principal">Lel vestido típico de chocaman tiene diferentes detalles,
                     entre ellos muchos animales y plantas representante de la region de chocaman, cada 
                     uno cuenta con diferentes significados.</p>
             </div>
-            <div id="contenedor-login" class="contenedor col-md-4">
+
+            <div id="contenedor-login" class="contenedor col-lg-4 col-md-12 col-sm-12">
                 <form action="login.php" method="post" class="formulario" id="iniciar-sesion">
                     <h2>Iniciar Sesión</h2>
                     <div class="grupo-correo">
@@ -64,7 +68,7 @@
             </div>
         </div>
     </div>
-    <?php include_once("footer.html") ?>
+    <?php include_once("footer.html") ?> 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>

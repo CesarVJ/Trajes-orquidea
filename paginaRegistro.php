@@ -28,7 +28,7 @@
 			<a href="index.php" id="texto-cambiante">Iniciar Sesión</a>
 	    </nav>
     </header>
-    <div id="contenido-principal" class="contenido content" >
+    <div id="contenido-principal-registro" class="contenido content contenido-principal" >
         <div  class="row">
             <div id="contenedor-registro" class="contenedor">
 				<form id="form-registro" name="form-registro" action="registro.php" onsubmit="return validarRegistro()" method="post" class="formulario" >
