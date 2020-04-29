@@ -27,6 +27,11 @@
 
 .contenedor-producto {
     text-align: center;
+    margin-top: 2rem;
+}
+
+.contenedor {
+    margin-bottom: 3rem;
 }
 
 .imagen-producto {
@@ -69,4 +74,10 @@
     margin-right: 8px;
     line-height: 1.3;
     font-size: 0.8rem;
+}
+
+.boton-admin {
+    width: 49.1%;
+    display: inline-block;
+    margin: 0px;
 }

@@ -14,7 +14,7 @@
     <?php
 		session_start();
 		if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-            if($correo == "root@gmail.com"){
+            if($_SESSION["tipo"]=="Administrador"){
     			header("location: CatalogoAdmin.php");
             }else{
                 header("location: CatalogoCliente.php");

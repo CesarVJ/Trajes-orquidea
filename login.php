@@ -14,6 +14,8 @@ include_once('modelo/Usuario.php');
                     echo "Bien 1";
                     $nombre = $usuario->getNombre();
                     if($usuario->getContraseña() == $contraseña){
+                        session_start(); // Se inicia la sesion
+                        $_SESSION["loggedin"] = true;
                         $_SESSION["usuario"] = $usuario;
                         if ($usuario->getTipo_usuario()== 1)
                             $_SESSION["tipo"] = "Administrador";
