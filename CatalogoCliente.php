@@ -39,7 +39,7 @@
                 <h3><?php echo $producto->getNombre_producto();?></h3>
                 <p class="descripcion-corta"><?php echo $producto->getDescripcion();?></p>
                     <a href="InformacionProducto.php?id=<?php echo $producto->getId_producto();?>">
-                <button class="boton" id="btn-comprar">Ver detalles</button></a>
+                <button class="btn btn-success boton" id="btn-comprar">Ver detalles</button></a>
             </div>
             <?php
 		}

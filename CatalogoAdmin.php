@@ -37,7 +37,7 @@
                 <img src="<?php echo $producto->getImagen();?>" class="imagen-producto">
                 <h3><?php echo $producto->getNombre_producto();?></h3>
                 <p class="descripcion-corta"><?php echo $producto->getDescripcion();?></p>
-                    <a href="InformacionProducto.php?id=<?php echo $producto->getId_producto();?>">
+                    <a href="EditarProducto.php?id=<?php echo $producto->getId_producto();?>">
                 <button class="boton-admin btn btn-primary" id="btn-editar">Editar</button></a>
                 <button class="boton-admin btn btn-danger" id="btn-editar">Eliminar</button></a>
 
