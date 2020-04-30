@@ -120,6 +120,32 @@ aside {
     margin: 20px;
 }
 
+/*Administrador*/
+.agregar {
+    width: 250px;
+    height: 250px;
+    margin-top: 15px;
+    background: rgba(120, 120, 120, 0.8);
+    border-radius: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-plus {
+    font-size: 150px;
+}
+
+.icon-plus:hover {
+    cursor: pointer;
+}
+
+.agregar:hover {
+    background: rgba(120, 120, 120, 1);
+}
+
+
+
 @media only screen and (max-width: 1300px) {
 
     .row {

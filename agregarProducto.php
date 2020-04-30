@@ -48,7 +48,7 @@
                 <label for="precio"><h3>Precio:</h3></label>
                 <input id="precio" type="text" name="precio">
             </div>
-            <input type="button" name="guardar" value="Guardar modificacion" class="btn btn-success">
+            <input type="button" name="agregar" value="Agregar producto" class="btn btn-success">
             </form>
 		</div>
 	</div>

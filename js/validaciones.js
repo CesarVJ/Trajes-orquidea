@@ -47,3 +47,16 @@ function validarRegistro() {
   }
   return true;
 }
+
+function verificarProducto(opcion) {
+  if (opcion) {
+    valor = "Complementos"
+    if (valor == opcion.value) {
+      document.getElementById("contenedor-talla").style.display = "none";
+    } else {
+      document.getElementById("contenedor-talla").style.display = "block";
+    }
+  } else {
+    document.getElementById("contenedor-talla").style.display = "block";
+  }
+}
