@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,47 +13,56 @@
 
     <title>Trajes Orquidea</title>
 </head>
-<body>
-<div class="contenido-body">
-    <?php require_once("menu.php") ?>
-    <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
-    <div class="contenedor-general">
-		<div class="imagen-vestido" style="text-align:center;">
-        <input type="file" name="portada" value="Inserta portada" accept=".jpg, .png, .svg, .jpeg">
-		</div>
 
-		<div class="contenedor-datos">
-            <form id="form-agregarProducto" action="agregar.php" action="" method="post" name="form-agregarProducto">			
-			<div id="nombre-articulo">
-				<label><h3>Nombre:</h3></label>
-				<input type="text" name="nombre-articulo" class="caja">
+<body>
+    <div class="contenido-body">
+        <?php require_once("menu.php") ?>
+        <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
+        <form id="form-agregarProducto" class="contenedor-general" action="modelo/create.php" method="post"
+            name="form-agregarProducto" enctype="multipart/form-data">
+
+            <div class="imagen-vestido" style="text-align:center;">
+                <input type="file" name="imagen" id="imagen" accept=".jpg, .png, .svg, .jpeg">
             </div>
-            <div class="contenedor-descripcion">
-				<h3>Descripción</h3>
-                <input type="textarea" name="descripcion" class="descripcion">
-            </div>
-            <div class="contenedor-categoria">
-					<label for="categoria"><h3>Categoria:</h3></label>
-					<select name="categoria" id="categoria" onchange="verificarProducto(this);">
-						<option>Selecciona categoria</option>
-						<option value="Trajes">Trajes</option>
-						<option value="Vestidos">Vestidos</option>
-						<option value="Complementos">Complementos</option>
-					</select>
-            </div>
-            <div id="contenedor-talla">
-                <label for="talla"><h3>Talla:</h3></label>
-                <input id="talla" type="text" name="talla">
-            </div>
-            <div class="contenedor-precio">
-                <label for="precio"><h3>Precio:</h3></label>
-                <input id="precio" type="text" name="precio">
-            </div>
-            <input type="button" name="agregar" value="Agregar producto" class="btn btn-success">
-            </form>
-		</div>
-	</div>
-</div>
+            <div class="contenedor-datos">
+
+                <div id="nombre-articulo">
+                    <label>
+                        <h3>Nombre:</h3>
+                    </label>
+                    <input type="text" name="nombre-producto" class="caja">
+                </div>
+                <div class="contenedor-descripcion">
+                    <h3>Descripción</h3>
+                    <input type="textarea" name="descripcion" class="descripcion">
+                </div>
+                <div class="contenedor-categoria">
+                    <label for="categoria">
+                        <h3>Categoria:</h3>
+                    </label>
+                    <select name="categoria" id="categoria" onchange="verificarProducto(this);">
+                        <option>Selecciona categoria</option>
+                        <option value="Trajes">Trajes</option>
+                        <option value="Vestidos">Vestidos</option>
+                        <option value="Complementos">Complementos</option>
+                    </select>
+                </div>
+                <div id="contenedor-talla">
+                    <label for="talla">
+                        <h3>Talla:</h3>
+                    </label>
+                    <input id="talla" type="text" name="talla">
+                </div>
+                <div class="contenedor-precio">
+                    <label for="precio">
+                        <h3>Precio:</h3>
+                    </label>
+                    <input id="precio" type="text" name="precio">
+                </div>
+                <input type="submit" name="modelo/create.php" value="Agregar producto" class="btn btn-success">
+        </form>
+    </div>
+    </div>
     <?php include_once("componentes/footer.html") ?>
     <script src="js/validaciones.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
