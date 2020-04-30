@@ -12,7 +12,6 @@
 	/*
 		session_start();
 		if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-
             if($correo == "root@gmail.com"){
     			header("location: CatalogoAdmin.php");
             }else{
@@ -53,7 +52,7 @@
             </div>
         </div>
     </div>
-    <?php include_once("footer.html") ?>
+    <?php include_once("componentes/footer.html") ?>
 
 	<script src="js/validaciones.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

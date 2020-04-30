@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css?v=<?php echo time(); ?>">
     <title>Trajes Orquidea</title>
 </head>
 
 <body>
+<div class="contenido-body">
     <?php
 		session_start();
 		if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
@@ -21,6 +22,7 @@
 			}
 			exit;
         }
+        echo "Datos para accedo de administrador: correo: root@gmail.com contraseña:root";
     ?>
     <div class="fondo"></div>
     <header>
@@ -68,7 +70,13 @@
             </div>
         </div>
     </div>
-    <?php include_once("footer.html") ?> 
+    </div>
+    <div class="footer-index">
+        <p id="tel-contacto">Telefono: 273 - 000 - 00 - 00</p>
+        <img class="icono-footer" src="img/facebook.png" alt="">
+        <img class="icono-footer" src="img/twitter.png." alt="">
+        <img class="icono-footer" src="img/instagram.png" alt="">
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>

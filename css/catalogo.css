@@ -1,3 +1,20 @@
+html,
+body {
+    height: 100%;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido-body {
+    flex: 1 0 auto;
+}
+
 #menu-catalogo {
     background-color: black;
     width: 100%;
@@ -12,6 +29,8 @@
     text-decoration: none;
 }
 
+
+
 #menu-catalogo:hover {
     text-decoration: none;
 }
@@ -22,7 +41,6 @@
     margin: 0 auto;
     padding: 0px;
     padding-left: 6rem;
-
 }
 
 .contenedor-producto {
@@ -30,8 +48,15 @@
     margin-top: 2rem;
 }
 
+.row {
+    float: left;
+    width: 80%;
+}
+
 .contenedor {
     margin-bottom: 3rem;
+    float: left;
+    width: 80%;
 }
 
 .imagen-producto {
@@ -80,4 +105,48 @@
     width: 49.1%;
     display: inline-block;
     margin: 0px;
+}
+
+.btn-eliminar,
+.btn-eliminar:hover {
+    text-decoration: none;
+    color: #ededed;
+}
+
+/*Aside*/
+aside {
+    float: right;
+    border: 2px solid black;
+    margin: 20px;
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .row {
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin: 10 auto;
+    }
+
+    aside {
+        float: none;
+        text-align: center;
+        margin: 10 auto;
+        width: 80%;
+    }
+
+    aside {
+        text-align: center;
+        margin: 30px auto;
+
+    }
+
+    iframe {
+        float: none;
+        width: 90%;
+    }
+
+
+
 }
