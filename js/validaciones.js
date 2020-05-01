@@ -60,3 +60,13 @@ function verificarProducto(opcion) {
     document.getElementById("contenedor-talla").style.display = "block";
   }
 }
+
+var precio = document.getElementById("precio-total");
+var value = $(".cantidad").val();
+$(".cantidad").on('keyup change click', function () {
+  if (this.value !== value) {
+    value = this.value;
+    precio.innerHTML = cantidad;
+    console.log(cantidad);
+  }
+});

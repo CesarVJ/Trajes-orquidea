@@ -39,7 +39,7 @@
                             $producto->setDescripcion($row["descripcion"]);            
                     ?>
                     <div class="contenedor-producto col-lg-4 col-md-6 col-sm-12">
-                        <img src="<?php echo $producto->getImagen();?>" class="imagen-producto">
+                        <img src="img/imagenesProductos/<?php echo $producto->getImagen();?>" class="imagen-producto">
                         <h3><?php echo $producto->getNombre_producto();?></h3>
                         <p class="descripcion-corta"><?php echo $producto->getDescripcion();?></p>
                         <a href="InformacionProducto.php?id=<?php echo $producto->getId_producto();?>">

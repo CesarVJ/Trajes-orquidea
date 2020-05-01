@@ -41,11 +41,9 @@
                 <div class="contenedor-producto col-lg-4 col-md-6 col-sm-12">
                     <img src="img/imagenesProductos/<?php echo $producto->getImagen();?>" class="imagen-producto">
                     <h3><?php echo $producto->getNombre_producto();?></h3>
-                    <p class="descripcion-corta"><?php echo $producto->getDescripcion();?></p>
-                    <a href="EditarProducto.php?id=<?php echo $producto->getId_producto();?>">
-                        <button class="boton-admin btn btn-primary" id="btn-editar">Editar</button></a>
-                    <button class="boton-admin btn btn-danger" id="btn-eliminar" type="button" data-toggle="modal"
-                        data-target="#mensaje-eliminar<?php echo $producto->getId_producto();?>">Eliminar</button></a>
+                    <p class="descripcion-corta"><?php echo $producto->getDescripcion();?></p>                
+                    <a href="EditarProducto.php?id=<?php echo $producto->getId_producto();?>" class="btn-editar"><button class="boton-admin btn btn-primary" id="btn-editar"> Editar </button></a>                                                                            
+                    <button class="boton-admin btn btn-danger" id="btn-eliminar" type="button" data-toggle="modal" data-target="#mensaje-eliminar<?php echo $producto->getId_producto();?>">Eliminar</button>
                 </div>
                 <div class="modal fade" id="mensaje-eliminar<?php echo $producto->getId_producto();?>" tabindex="-1"
                     role="dialog" aria-labelledby="mensaje-eliminar" aria-hidden="true">

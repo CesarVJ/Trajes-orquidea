@@ -109,7 +109,9 @@ body {
 }
 
 .btn-eliminar,
-.btn-eliminar:hover {
+.btn-eliminar:hover,
+.btn-editar,
+.btn-editar:hover {
     text-decoration: none;
     color: #ededed;
 }
