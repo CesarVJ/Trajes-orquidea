@@ -15,7 +15,7 @@
 <body>
 <?php require_once("obtenerDatos.php")?>
 <div class="contenido-body">
-    <?php require_once("menu.php") ?>
+    <?php require_once("componentes/menu.php") ?>
     <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
 	<div class="contenedor-general">
 		<div class="contenedor-pago">

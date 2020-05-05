@@ -22,16 +22,19 @@ include_once('modelo/Usuario.php');
                         else
                             $_SESSION["tipo"] = "Cliente";
                     }else{
-                        $sErr = "Contraseña incorrecta";
+                        #$sErr = "Contraseña incorrecta";
+                        header("location: index.php?error=2");
                     }
                 }else{
-                    $sErr = "Usuario desconocido";
+                    #$sErr = "Usuario desconocido";
+                    header("location: index.php?error=1");
                 }
             }catch(Exception $error){
                 $sErr = "Error al acceder a la base de datos";
             }
     }else{
-        $sErr = "Faltan datos";
+       # $sErr = "Faltan datos";
+       header("location: index.php?error=3");
     }    	
 	if ($sErr == ""){
         if($_SESSION["tipo"] == "Administrador"){
@@ -39,8 +42,6 @@ include_once('modelo/Usuario.php');
         }else if($_SESSION["tipo"] == "Cliente"){
             header("location: CatalogoCliente.php");
         }
-    }else{
-        header("Location: error.php?sError=".$sErr);
     }
 
 ?>

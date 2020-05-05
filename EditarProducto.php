@@ -17,7 +17,7 @@
 
 <body>
     <div class="contenido-body">
-        <?php require_once("menu.php") ?>
+        <?php require_once("componentes/menu.php") ?>
         <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
         <form id="form-modificarProducto" class="contenedor-general" action="modelo/update.php?id=<?php echo $producto->getId_producto();?>" method="post"
             name="form-modificarProducto" enctype="multipart/form-data" >

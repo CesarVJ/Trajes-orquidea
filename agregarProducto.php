@@ -16,7 +16,7 @@
 
 <body>
     <div class="contenido-body">
-        <?php require_once("menu.php") ?>
+        <?php require_once("componentes/menu.php") ?>
         <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
         <form id="form-agregarProducto" class="contenedor-general" action="modelo/create.php" method="post"
             name="form-agregarProducto" enctype="multipart/form-data">

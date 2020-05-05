@@ -146,7 +146,8 @@ header {
 
 #error-correo,
 #error-contraseña,
-#error-registro {
+#error-registro,
+#error-inicio {
     display: none;
 }
 
@@ -318,7 +319,8 @@ input[type=date] {
 
 #error-correo,
 #error-contraseña,
-#error-registro {
+#error-registro,
+#error-inicio {
     display: none;
 }
 

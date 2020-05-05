@@ -61,6 +61,29 @@ function verificarProducto(opcion) {
   }
 }
 
+function verificarInicio() {
+  var correo = document.forms["iniciar-sesion"]["correo"].value;
+  var contraseña = document.forms["iniciar-sesion"]["contraseña"].value;
+
+  if (correo == "" || contraseña == "") {
+    let error = document.querySelector("#error-inicio");
+    error.style.display = "block";
+    let mensaje = document.querySelector("#mensaje-inicio");
+    mensaje.innerHTML = "Por favor, rellene todos los campos";
+    return false;
+
+  }
+  return true;
+}
+
+function mensajeError(texto) {
+  let error = document.querySelector("#error-inicio");
+  error.style.display = "block";
+  let mensaje = document.querySelector("#mensaje-inicio");
+  mensaje.innerHTML = texto;
+
+}
+/*
 var precio = document.getElementById("precio-total");
 var value = $(".cantidad").val();
 $(".cantidad").on('keyup change click', function () {
@@ -69,4 +92,4 @@ $(".cantidad").on('keyup change click', function () {
     precio.innerHTML = cantidad;
     console.log(cantidad);
   }
-});
+});*/

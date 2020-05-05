@@ -7,6 +7,7 @@
 		$catalogo="CatalogoCliente.php";
 	}
 ?>
+<header>
 <nav id="navegacion">
 	<ul id="menu-catalogo">
 		<li><a href="index.php">Inicio</a></li>
@@ -16,3 +17,4 @@
 		<li id="cerrar-sesion"><a href="cerrarSesion.php">Cerrar Sesión</a></li>
 	</ul>
 </nav>
+</header>

@@ -45,7 +45,7 @@
             </div>
 
             <div id="contenedor-login" class="contenedor col-lg-4 col-md-12 col-sm-12">
-                <form action="login.php" method="post" class="formulario" id="iniciar-sesion">
+                <form action="login.php" method="post" class="formulario" id="iniciar-sesion" onsubmit="return verificarInicio();">
                     <h2>Iniciar Sesión</h2>
                     <div class="grupo-correo">
                         <p class="texto">Correo</p>
@@ -64,6 +64,10 @@
                             <img class="icono-error" src="img/error.svg" alt="error">
                             <p class="mensaje-error">La contraseña es incorrecta</p>
                         </div>
+                        <div class="grupo-error" id="error-inicio">
+                            <img class="icono-error" src="img/error.svg" alt="error">
+                            <p id ="mensaje-inicio" class="mensaje-error"> </p>
+                        </div>
                         <input type="submit" name="entrar" value="Iniciar sesión" class="boton btn-iniciar">
                     </div>
                 </form>
@@ -77,6 +81,7 @@
         <img class="icono-footer" src="img/twitter.png." alt="">
         <img class="icono-footer" src="img/instagram.png" alt="">
     </div>
+    <script src="js/validaciones.js?v=<?php echo time(); ?>"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
@@ -89,3 +94,15 @@
 </body>
 
 </html>
+<?php
+		if (isset($_GET['error'])){			
+			if($_GET['error'] == 1){
+				echo "<script type='text/javascript'>mensajeError('El usuario no existe');</script>";
+			}else if($_GET['error'] == 2){
+				echo "<script type='text/javascript'>mensajeError('La contraseña es incorrecta');</script>";
+			}else if($_GET['error'] == 3){
+				echo "<script type='text/javascript'>mensajeError('Por favor, ingrese todo los datos');</script>";
+            }
+		}
+
+?>

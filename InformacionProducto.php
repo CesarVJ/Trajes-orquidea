@@ -15,7 +15,7 @@
 <body>
 <?php require_once("obtenerDatos.php")?>
 <div class="contenido-body">
-    <?php require_once("menu.php") ?>
+    <?php require_once("componentes/menu.php") ?>
     <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
     <form class="contenedor-general" id="form-comprarProducto" action="realizarPago.php?id=<?php echo $producto->getId_producto();?>" method="post"
             name="form-comprarProducto">
@@ -31,7 +31,7 @@
 				<label for="cantidad-articulos">Cantidad:</label>
                 <input type="number" class="cantidad" name="cantidad-articulos" min="1" id="cantidad-articulos"> <br>
                 <input type="hidden" id="v" value = "0"/>
-				<label>Precio: <span id="precio-total">$$</span></label><br>
+				<label>Precio: <span id="precio-total"></span> $</label><br>
                 <button>Realizar compra</button>
                 <script>
                     $("#cantidad-articulos").bind('keyup mouseup', function () {

@@ -5,7 +5,7 @@
 	$producto = new producto();
 
 	if (isset($_GET['id'])){
-		//Se asignan los datos de los producto a editar
+		//Se asignan los datos del producto 
 		$producto->setId_producto($_GET['id']);
 
 		$consultaProducto = "select * from producto where id_producto = '".$producto->getId_producto()."'";
