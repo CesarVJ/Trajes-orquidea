@@ -19,7 +19,7 @@
         <?php require_once("componentes/menu.php") ?>
         <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
         <form id="form-agregarProducto" class="contenedor-general" action="modelo/create.php" method="post"
-            name="form-agregarProducto" enctype="multipart/form-data">
+            name="form-agregarProducto" enctype="multipart/form-data" onsubmit = "return verificarCampos('agregar');">
 
             <div class="imagen-vestido" style="text-align:center;">
                 <input type="file" name="imagen" id="imagen" accept=".jpg, .png, .svg, .jpeg">
@@ -51,20 +51,24 @@
                     <label for="talla">
                         <h3>Talla:</h3>
                     </label>
-                    <input id="talla" type="text" name="talla">
+                    <input id="talla" type="number" name="talla">
                 </div>
                 <div class="contenedor-precio">
                     <label for="precio">
                         <h3>Precio:</h3>
                     </label>
-                    <input id="precio" type="text" name="precio">
+                    <input id="precio" type="number" name="precio">
                 </div>
                 <input type="submit" name="modelo/create.php" value="Agregar producto" class="btn btn-success">
+                <div class="grupo-error" id="error-agregar">
+                    <img class="icono-error" src="img/error.svg" alt="error">
+                    <p id ="error-agregar-mensaje" class="mensaje-error"> </p>
+                </div>
         </form>
     </div>
     </div>
     <?php include_once("componentes/footer.html") ?>
-    <script src="js/validaciones.js"></script>
+    <script src="js/validaciones.js?v=<?php echo time(); ?>"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>

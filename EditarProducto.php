@@ -20,7 +20,7 @@
         <?php require_once("componentes/menu.php") ?>
         <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
         <form id="form-modificarProducto" class="contenedor-general" action="modelo/update.php?id=<?php echo $producto->getId_producto();?>" method="post"
-            name="form-modificarProducto" enctype="multipart/form-data" >
+            name="form-modificarProducto" enctype="multipart/form-data" onsubmit = "return verificarCampos('editar');" >
 
             <div class="imagen-vestido portada-activa" style="background-image: url('<?php echo "img/imagenesProductos/".$producto->getImagen(); ?>')">
                 <input type="file" name="imagen" id="imagen" accept=".jpg, .png, .svg, .jpeg">
@@ -75,20 +75,26 @@
                     <label for="talla">
                         <h3>Talla:</h3>
                     </label>
-                    <input id="talla" type="text" name="talla" value="<?php echo $producto->getTalla(); ?>">
+                    <input id="talla" type="number" name="talla" value="<?php echo $producto->getTalla(); ?>">
                 </div>
                 <div class="contenedor-precio">
                     <label for="precio">
                         <h3>Precio:</h3>
                     </label>
-                    <input id="precio" type="text" name="precio" value="<?php echo $producto->getPrecio();?>">
+                    <input id="precio" type="number" name="precio" value="<?php echo $producto->getPrecio();?>">
                 </div>
                 <input type="submit" name="modelo/update.php" value="Editar producto" class="btn btn-success">
+
+                <div class="grupo-error" id="error-editar">
+                    <img class="icono-error" src="img/error.svg" alt="error">
+                    <p id ="error-editar-mensaje" class="mensaje-error"> </p>
+                </div>
+
         </form>
     </div>
     </div>
     <?php include_once("componentes/footer.html") ?>
-    <script src="js/validaciones.js"></script>
+    <script src="js/validaciones.js?v=<?php echo time(); ?>"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>

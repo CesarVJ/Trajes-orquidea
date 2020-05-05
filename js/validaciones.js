@@ -47,10 +47,35 @@ function validarRegistro() {
   }
   return true;
 }
+function verificarCampos(tipo) {
+  if (tipo == "agregar") {
+    formulario = "form-agregarProducto";
+    cajaError = "#error-agregar";
+    parrafo = "#error-agregar-mensaje";
+  } else if (tipo == "editar") {
+    formulario = "form-modificarProducto";
+    parrafo = "#error-editar-mensaje";
+    cajaError = "#error-editar";
+  }
+
+  var titulo = document.forms[formulario]["nombre-producto"].value;
+  var descripcion = document.forms[formulario]["descripcion"].value;
+  var categoria = document.forms[formulario]["categoria"].value;
+  var precio = document.forms[formulario]["precio"].value;
+
+  if (titulo == "" || descripcion == "" || categoria == "" || precio == 0) {
+    let error = document.querySelector(cajaError);
+    error.style.display = "block";
+    let mensaje = document.querySelector(parrafo);
+    mensaje.innerHTML = "Por favor, rellene todos los campos";
+    return false;
+  }
+  return true;
+}
 
 function verificarProducto(opcion) {
   if (opcion) {
-    valor = "Complementos"
+    valor = "Complementos";
     if (valor == opcion.value) {
       document.getElementById("contenedor-talla").style.display = "none";
     } else {
@@ -71,7 +96,6 @@ function verificarInicio() {
     let mensaje = document.querySelector("#mensaje-inicio");
     mensaje.innerHTML = "Por favor, rellene todos los campos";
     return false;
-
   }
   return true;
 }
@@ -81,7 +105,6 @@ function mensajeError(texto) {
   error.style.display = "block";
   let mensaje = document.querySelector("#mensaje-inicio");
   mensaje.innerHTML = texto;
-
 }
 /*
 var precio = document.getElementById("precio-total");

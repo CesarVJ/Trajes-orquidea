@@ -307,7 +307,8 @@ input[type=date] {
     margin: 1px 25px;
 }
 
-.mensaje-error {
+.mensaje-error,
+#error-agregar {
     color: red;
     text-align: left;
 }
@@ -320,7 +321,9 @@ input[type=date] {
 #error-correo,
 #error-contraseña,
 #error-registro,
-#error-inicio {
+#error-inicio,
+#error-agregar,
+#error-editar {
     display: none;
 }
 
