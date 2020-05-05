@@ -37,9 +37,16 @@
                     $producto->setImagen(basename($_FILES['imagen']['name']));
                     
                     echo $producto->getImagen();
+                    echo $producto->getId_producto();
+                    echo $producto->getNombre_producto();
+                    echo $producto->getCategoria();
+                    echo  $producto->getPrecio();
+                    echo $producto->getDescripcion();
+                    echo $producto->getTalla();
+                    
 
                     #Se inserta el nuevo producto
-                    mysqli_stmt_bind_param($statement, "issdsis",$producto->getId_producto(), $producto->getNombre_producto(), $producto->getCategoria(), $producto->getPrecio(), $producto->getDescripcion(), $producto->getTalla(), $producto->getImagen());        
+                    mysqli_stmt_bind_param($statement, "sssssss",$producto->getId_producto(), $producto->getNombre_producto(), $producto->getCategoria(), $producto->getPrecio(), $producto->getDescripcion(), $producto->getTalla(), $producto->getImagen());        
                     if(mysqli_stmt_execute($statement)){
                         header("location: ../CatalogoAdmin.php");
 

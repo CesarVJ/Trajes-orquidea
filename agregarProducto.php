@@ -57,7 +57,7 @@
                     <label for="precio">
                         <h3>Precio:</h3>
                     </label>
-                    <input id="precio" type="number" name="precio">
+                    <input id="precio" type="number"  min="1" step="any" name="precio">
                 </div>
                 <input type="submit" name="modelo/create.php" value="Agregar producto" class="btn btn-success">
                 <div class="grupo-error" id="error-agregar">
