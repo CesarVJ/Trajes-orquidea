@@ -1,11 +1,14 @@
 <?php
-    session_start();
+
+	session_start();
 	$catalogo="";
 	if($_SESSION['tipo']=='Administrador'){
 		$catalogo="CatalogoAdmin.php";
 	}else{
 		$catalogo="CatalogoCliente.php";
 	}
+
+	$id_user = $_SESSION['id'];
 ?>
 <header>
 <nav id="navegacion">
@@ -17,11 +20,16 @@
 		<?php
 			if($_SESSION['tipo']=='Administrador'){
 		?>
-			<li name="ventas" id="ventas"><a href="vista/ventas.php">Ventas</a></li>
+			<li name="ventas" id="ventas"><a href="ventas.php">Ventas</a></li>
 		<?php
 			}else{
 		?>
-			<li name="perfil" id="perfil"><a href="vista/perfil.php">Mi Perfil</a></li>
+			<li name="perfil" id="perfil"><a href="perfil.php?id=<?php echo $id_user ?>">Mi Perfil</a>
+			<ul>
+				<li><a href="misCompras.php?id=<?php echo $id_user ?>">Mis compras</a></li>
+			</ul>
+		
+		</li>
 		<?php
 			}
 		?>		

@@ -1,0 +1,44 @@
+#contenedor-datos {
+    width: 70%;
+    height: 100%;
+    margin: 0px auto;
+    background-color: #fff;
+    padding: 0px border-radius: 10px;
+    text-align: center;
+    box-shadow: -4px -3px 21px 8px rgba(255, 255, 255, 0.2);
+}
+
+#cont-calendario {
+    position: relative;
+}
+
+#perfil-calendario {
+    position: absolute;
+    left: 38%;
+    margin-top: 8px;
+    width: 43px;
+    z-index: 1;
+}
+
+#perfil-correo {
+    width: 49%;
+    display: inline-block;
+}
+
+.row {
+    width: 100%;
+}
+
+#guardar-cambios {
+    width: 60%;
+    margin-top: 1rem;
+}
+
+#error-perfil {
+    display: none;
+}
+
+.contraseña-perfil {
+    width: 45%;
+    display: inline-block;
+}

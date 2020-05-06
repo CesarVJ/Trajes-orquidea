@@ -9,13 +9,13 @@
 		$usuario->setId_usuario($_GET['id']);
 
 		$consultaUsuario = "select * from usuarios where id_usuario = '".$usuario->getId_usuario()."'";
-		$datosusUario = $conexion -> query($consultaUsuario);
+		$datosUsuario = $conexion -> query($consultaUsuario);
 
 		//Se asignan los datos al objeto tipo usuario actual
         $row = $datosUsuario->fetch_assoc();
         
-        $usuario->setNombre($row["nombre"]);
-        $usuario->setFecha_nacimiento($row["categoria"]);
+        $usuario->setNombre($row["Nombre"]);
+        $usuario->setFecha_nacimiento($row["fecha_nacimiento"]);
         $usuario->setCorreo($row["correo"]);
         $usuario->setDireccion($row["direccion"]);
         $usuario->setTelefono($row["telefono"]);
