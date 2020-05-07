@@ -23,6 +23,7 @@
                         require('modelo/Producto.php');
 
                         $producto = new Producto();
+                        include 'modelo/AccesoDatos.php';
                         $conexion = abrirConexion();
                         $consultaProductos="";
                         if (isset($_GET['categoria'])){

@@ -21,7 +21,7 @@
             <div class="row">
                 <?php
         require('modelo/Producto.php');
-
+        include 'modelo/AccesoDatos.php';
         $producto = new Producto();
         $conexion = abrirConexion();
         $consultaProductos="";

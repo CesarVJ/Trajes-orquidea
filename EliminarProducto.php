@@ -4,7 +4,7 @@ session_start();
 require("modelo/Producto.php");
 #require("modelo/AccesoDatos.php");
 
-
+include 'modelo/AccesoDatos.php';
 $conexion= abrirConexion();
 $producto = new Producto();
 

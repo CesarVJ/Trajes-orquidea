@@ -1,5 +1,5 @@
 <?php
-include 'AccesoDatos.php';
+#include 'AccesoDatos.php';
 class Producto{
     private $id_producto =0;
     private $nombre_producto = "";
@@ -7,7 +7,33 @@ class Producto{
     private $precio =0;
     private $descripcion ="";
     private $talla = 0;
-    private $imagen = "";
+	private $imagen = "";
+	
+	public function __construct(){
+		$params = func_get_args();
+		$num_params = func_num_args();
+		$funcion_constructor ='__construct'.$num_params;
+		if (method_exists($this,$funcion_constructor)) {
+			call_user_func_array(array($this,$funcion_constructor),$params);
+		}
+	}
+
+	public function __construct0(){
+
+	}
+	public function __construct1($idProducto){
+		$conexion = abrirConexion();
+		$this->setId_producto($_GET['id']);
+		$consultaProducto = "select * from producto where id_producto = '".$idProducto."'";
+		$datosProducto = $conexion -> query($consultaProducto);
+        $row = $datosProducto->fetch_assoc();        
+        $this->setNombre_producto($row["nombre_producto"]);
+        $this->setCategoria($row["categoria"]);
+        $this->setPrecio($row["precio"]);
+        $this->setDescripcion($row["descripcion"]);
+        $this->setTalla($row["talla"]);
+        $this->setImagen($row["imagen"]);
+	}
 
     public function getId_producto(){
 		return $this->id_producto;

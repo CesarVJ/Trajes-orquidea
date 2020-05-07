@@ -1,6 +1,6 @@
 <?php
 	require("modelo/Producto.php");
-
+	include 'modelo/AccesoDatos.php';
 	$conexion= abrirConexion();
 	$producto = new producto();
 

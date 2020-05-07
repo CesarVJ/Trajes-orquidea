@@ -1,5 +1,6 @@
 <?php
     include 'Producto.php';
+    include 'AccesoDatos.php';
     $existeProducto = false;
     $num_productos=0;
     $producto = new Producto();
