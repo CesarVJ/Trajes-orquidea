@@ -27,6 +27,7 @@
 
 				<h3>Descripción</h3>
 				<p><?php echo $producto->getDescripcion(); ?></p>
+                <p><b>Talla: </b><?php echo $producto->getTalla(); ?></p>
 
 				<label for="cantidad-articulos">Cantidad:</label>
                 <input type="number" class="cantidad" name="cantidad-articulos" min="1" id="cantidad-articulos"> <br>

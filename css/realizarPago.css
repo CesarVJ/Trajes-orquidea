@@ -4,7 +4,7 @@ body {
 }
 
 .contenedor-pago {
-	width: 70%;
+	width: 80%;
 	margin: 40px auto;
 	padding: 20px;
 	font-family: Arial;
@@ -40,7 +40,6 @@ body {
 }
 
 .texto {
-	width: 50%;
 	font-size: 20px;
 	border-radius: 5%;
 }
@@ -52,4 +51,8 @@ body {
 .contenedor-general {
 	display: grid;
 	grid-template-areas: "comprar-boleto mostrar-boleto";
+}
+
+#codigo-seguridad {
+	width: 30%;
 }
