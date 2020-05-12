@@ -6,7 +6,6 @@
         $dbuser = "root";
         $dbpassword = "";
         $database = "TrajesOrquidea";
-    
         $conexion = new mysqli($dbhost, $dbuser, $dbpassword, $database) or die("Fallo la conexión:%s\n".$conexion ->error);
         return $conexion;
     }

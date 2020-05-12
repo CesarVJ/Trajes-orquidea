@@ -48,6 +48,10 @@ function verificarDatosPerfil() {
   return true;
 }
 
+function esNumero(valor) {
+  return /^-{0,1}\d+$/.test(valor);
+}
+
 function validarRegistro() {
   var nombre = document.forms["form-registro"]["nombre"].value;
   var fecha_nacimiento =
@@ -72,6 +76,14 @@ function validarRegistro() {
       "Ocurrió un error al registrarse, uno o más de sus datos no han sido proporcionados.";
     registro_error.style.display = "block";
     return false;
+  }
+
+  if (telefono != "") {
+    if (telefono.length != 10 || !esNumero(telefono)) {
+      mensajeError.innerHTML = "El telefono proporcionado no es valido";
+      registro_error.style.display = "block";
+      return false;
+    }
   }
 
   if (contraseña.length < 4) {
