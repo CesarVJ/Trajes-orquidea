@@ -27,11 +27,9 @@
 			}
 			try{
                 $result = $Conexion->query($consulta); 
-                echo "No error";
 			}catch(Exception $error){
 				throw $error;
             }
-            echo "No error 2";
 			if ($result){
                 
 				foreach($result as $tupla){ 

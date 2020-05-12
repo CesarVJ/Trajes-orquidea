@@ -7,18 +7,18 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilos.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="css/catalogo.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="css/centro.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../css/estilos.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../css/catalogo.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../css/centro.css?v=<?php echo time(); ?>">
 
     <title>Trajes Orquidea</title>
 </head>
 
 <body>
     <div class="contenido-body">
-        <?php require_once("componentes/menu.php") ?>
+        <?php require_once("../componentes/menu.php") ?>
         <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
-        <form id="form-agregarProducto" class="contenedor-general" action="modelo/create.php" method="post"
+        <form id="form-agregarProducto" class="contenedor-general" action="../modelo/create.php" method="post"
             name="form-agregarProducto" enctype="multipart/form-data" onsubmit = "return verificarCampos('agregar');">
 
             <div class="imagen-vestido" style="text-align:center;">
@@ -59,16 +59,16 @@
                     </label>
                     <input id="precio" type="number"  min="1" step="any" name="precio">
                 </div>
-                <input type="submit" name="modelo/create.php" value="Agregar producto" class="btn btn-success">
+                <input type="submit" name="../modelo/create.php" value="Agregar producto" class="btn btn-success">
                 <div class="grupo-error" id="error-agregar">
-                    <img class="icono-error" src="img/error.svg" alt="error">
+                    <img class="icono-error" src="../img/error.svg" alt="error">
                     <p id ="error-agregar-mensaje" class="mensaje-error"> </p>
                 </div>
         </form>
     </div>
     </div>
-    <?php include_once("componentes/footer.html") ?>
-    <script src="js/validaciones.js?v=<?php echo time(); ?>"></script>
+    <?php include_once("../componentes/footer.html") ?>
+    <script src="../js/validaciones.js?v=<?php echo time(); ?>"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>

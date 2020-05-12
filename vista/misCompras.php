@@ -1,6 +1,6 @@
-<?php require_once("ObtenerDatosUsuario.php"); ?>
-<?php require_once("modelo/Compras.php"); ?>
-<?php require_once("modelo/Producto.php"); ?>
+<?php require_once("../ObtenerDatosUsuario.php"); ?>
+<?php require_once("../modelo/Compras.php"); ?>
+<?php require_once("../modelo/Producto.php"); ?>
 
 
 <!DOCTYPE html>
@@ -11,9 +11,9 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilos.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="css/catalogo.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="css/perfil.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../css/estilos.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../css/catalogo.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../css/perfil.css?v=<?php echo time(); ?>">
     <script src="https://code.jquery.com/jquery-3.5.0.js"
         integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
     <title>Trajes Orquidea</title>
@@ -25,7 +25,7 @@
     $compras = $compra->obtenerComprasUsuario($id_usuario);
 ?>
     <div class="contenido-body">
-        <?php require_once("componentes/menu.php") ?>
+        <?php require_once("../componentes/menu.php") ?>
         <h1 class="titulo-Catalogo">Mis compras</h1>
         <div class="container">
             <div class="row">
@@ -34,7 +34,7 @@
                 $producto = new Producto($listaCompras->getId_producto());
             ?>    
                 <div class="card col-lg-3 col-md-6 col-sm-12">
-                    <img src="img/imagenesProductos/<?php echo $producto->getImagen(); ?>" class="card-img-top" alt="..." style="height: 15rem;width:15rem; margin: 5px auto;">
+                    <img src="../img/imagenesProductos/<?php echo $producto->getImagen(); ?>" class="card-img-top" alt="..." style="height: 15rem;width:15rem; margin: 5px auto;">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $producto->getNombre_producto(); ?></h5>
                         <p><b>Pagado: </b> <?php echo $listaCompras->getTotal(); ?>$</p>
@@ -48,8 +48,8 @@
             </div>
         </div>
     </div>
-    <?php include_once("componentes/footer.html") ?>
-    <script src="js/validaciones.js?v=<?php echo time(); ?>"></script>
+    <?php include_once("../componentes/footer.html") ?>
+    <script src="../js/validaciones.js?v=<?php echo time(); ?>"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>

@@ -6,20 +6,20 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/estilos.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="css/catalogo.css?v=<?php echo time(); ?>">
-        <link rel="stylesheet" href="css/centro.css?v=<?php echo time(); ?>">
+        <link rel="stylesheet" href="../css/estilos.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../css/catalogo.css?v=<?php echo time(); ?>">
+        <link rel="stylesheet" href="../css/centro.css?v=<?php echo time(); ?>">
         <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
     <title>Trajes Orquidea</title>
 </head>
 <body>
-<?php require_once("obtenerDatos.php")?>
+<?php require_once("../obtenerDatos.php")?>
 <div class="contenido-body">
-    <?php require_once("componentes/menu.php") ?>
+    <?php require_once("../componentes/menu.php") ?>
     <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
-    <form class="contenedor-general" id="form-comprarProducto" action="realizarPago.php?id=<?php echo $producto->getId_producto();?>" method="post"
+    <form class="contenedor-general" id="form-comprarProducto" action="formularioPago.php?id=<?php echo $producto->getId_producto();?>" method="post"
             name="form-comprarProducto">
-		<div class="imagen-vestido portada-activa" style="background-image: url('<?php echo "img/imagenesProductos/".$producto->getImagen(); ?>')">
+		<div class="imagen-vestido portada-activa" style="background-image: url('<?php echo "../img/imagenesProductos/".$producto->getImagen(); ?>')">
 		</div>
 
 		<div class="contenedor-datos">
@@ -49,8 +49,8 @@
 		</div>
                 </form>
 </div>
-    <?php include_once("componentes/footer.html") ?>
-    <script src="js/validaciones.js"></script>
+    <?php include_once("../componentes/footer.html") ?>
+    <script src="../js/validaciones.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>

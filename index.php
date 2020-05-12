@@ -16,9 +16,9 @@
 		session_start();
 		if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
             if($_SESSION["tipo"]=="Administrador"){
-    			header("location: CatalogoAdmin.php");
+    			header("location: vista/CatalogoAdmin.php");
             }else{
-                header("location: CatalogoCliente.php");
+                header("location: vista/CatalogoCliente.php");
 			}
 			exit;
         }
@@ -28,7 +28,7 @@
     <header>
         <nav class="menu contenido">
             <a href="index.php" class="logo"><strong>Trajes Orquidea</strong></a>
-            <a href="paginaRegistro.php" id="texto-cambiante">Registrarse</a>
+            <a href="vista/paginaRegistro.php" id="texto-cambiante">Registrarse</a>
         </nav>
     </header>
     <div class="contenido content container">

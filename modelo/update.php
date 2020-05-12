@@ -37,7 +37,7 @@ if(isset($_GET["id"]) && !empty($_GET["id"])){
             
             if(mysqli_stmt_execute($stmt)){
                 require_once("almacenarImagen.php");
-                header("location: ../CatalogoAdmin.php");
+                header("location: ../vista/CatalogoAdmin.php");
                 exit();
             } else{
                 echo "Ocurrio un error al editar el articulo, intentelo de nuevo.";

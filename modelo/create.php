@@ -15,7 +15,7 @@
             $resultado = $conexion -> query($productoNuevo);
             if($resultado->num_rows > 0){
                 $existeProducto=true;
-                header("location: ../agregarProducto.php");
+                header("location: ../vista/agregarProducto.php");
             }else{
                 //Se obtiene el numero de prodcutos existentes
                 $productos = "select id_producto from producto";
@@ -42,7 +42,7 @@
                     #Se inserta el nuevo producto
                     mysqli_stmt_bind_param($statement, "issdsis",$producto->getId_producto(), $producto->getNombre_producto(), $producto->getCategoria(), $producto->getPrecio(), $producto->getDescripcion(), $producto->getTalla(), $producto->getImagen());        
                     if(mysqli_stmt_execute($statement)){
-                        header("location: ../CatalogoAdmin.php");
+                        header("location: ../vista/CatalogoAdmin.php");
 
                         require_once("almacenarImagen.php");
 

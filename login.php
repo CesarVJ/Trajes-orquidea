@@ -39,9 +39,9 @@ include_once('modelo/Usuario.php');
     }    	
 	if ($sErr == ""){
         if($_SESSION["tipo"] == "Administrador"){
-            header("location: CatalogoAdmin.php");
+            header("location: vista/CatalogoAdmin.php");
         }else if($_SESSION["tipo"] == "Cliente"){
-            header("location: CatalogoCliente.php");
+            header("location: vista/CatalogoCliente.php");
         }
     }
 
