@@ -15,7 +15,7 @@ if(isset($_GET['id']) && !empty($_GET["id"])){
             $param_id = $id_usuario;
             
             if(mysqli_stmt_execute($stmt)){
-                header("location: vista/Perfil.php");
+                header("location: vista/Perfil.php?id=".$_GET["id"]);
                 exit();
             } else{
                 echo "Ocurrio un error al actualizar su informacion, intentelo de nuevo.";

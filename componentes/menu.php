@@ -24,6 +24,7 @@
 		<?php
 			}else{
 		?>
+			<li name="contacto" id="contacto"><a href="contacto.php">Contactanos</li></a>
 			<li name="perfil" id="perfil"><a href="perfil.php?id=<?php echo $id_user ?>">Mi Perfil</a>
 			<ul>
 				<li><a href="misCompras.php?id=<?php echo $id_user ?>">Mis compras</a></li>

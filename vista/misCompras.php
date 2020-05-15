@@ -5,6 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,9 @@
 </head>
 
 <body>
-<?php     
+    <?php     
+    $date = date('Y/m/d', time());
+    $date = str_replace('/', '-', $date);
     $compra  = new Compras();
     $compras = $compra->obtenerComprasUsuario($id_usuario);
 ?>
@@ -29,22 +32,33 @@
         <h1 class="titulo-Catalogo">Mis compras</h1>
         <div class="container">
             <div class="row">
-            <?php             
+                <?php             
             foreach ($compras as $listaCompras){ 
                 $producto = new Producto($listaCompras->getId_producto());
-            ?>    
+            ?>
                 <div class="card col-lg-3 col-md-6 col-sm-12">
-                    <img src="../img/imagenesProductos/<?php echo $producto->getImagen(); ?>" class="card-img-top" alt="..." style="height: 15rem;width:15rem; margin: 5px auto;">
+                    <img src="../img/imagenesProductos/<?php echo $producto->getImagen(); ?>" class="card-img-top"
+                        alt="..." style="height: 15rem;width:15rem; margin: 5px auto;">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $producto->getNombre_producto(); ?></h5>
                         <p><b>Pagado: </b> <?php echo $listaCompras->getTotal(); ?>$</p>
                         <p><b>Comprado: </b><?php echo $listaCompras->getFecha_compra(); ?></p>
                         <p><b>Llega: </b><?php echo $listaCompras->getFecha_llegada(); ?></p>
-                        <a href="#" class="btn btn-danger">Cancelar pedido</a>
+                        <?php
+                            if(strtotime($date) < strtotime($listaCompras->getFecha_llegada())){ ?>
+                                <a href="#" class="btn btn-danger">Cancelar pedido</a>                            
+                        <?php }else{ ?>
+                            <a href="#" class="btn btn-secondary deshabilitado">Pedido enviado</a>                            
+                        <?php    }
+                        ?>                        
                     </div>
                 </div>
 
-            <?php } ?>
+                <?php } ?>
+                <script>
+                $('.btn.deshabilitado').css("pointerEvents","none");
+                $('.btn.deshabilitado').css("cursor","default");
+                </script>
             </div>
         </div>
     </div>
@@ -59,6 +73,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+ <script src="https://account.snatchbot.me/script.js"></script><script>window.sntchChat.Init(109433)</script> 
 </body>
 
 </html>
