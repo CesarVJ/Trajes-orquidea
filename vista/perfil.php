@@ -20,7 +20,7 @@
     <h1 class="titulo-Catalogo">Mis datos</h1>
         <div  class="row" style="margin: 0 auto;">
             <div id="contenedor-datos">
-				<form id="form-datos" name="form-datos" action="actualizarDatos.php" onsubmit="return verificarDatosPerfil()" method="post" class="formulario" >
+				<form id="form-datos" name="form-datos" action="../actualizarDatos.php?id=<?php echo $id_usuario; ?>" onsubmit="return verificarDatosPerfil()" method="post" class="formulario" >
 			        <input type="text" name="nombre" class="item" value="<?php echo $nombre_usuario; ?>" placeholder="Ingrese su nombre">
 			        <div id="cont-calendario">
 				        <img class="icono" id="perfil-calendario" src="../img/calendario.svg" alt="calendario">
