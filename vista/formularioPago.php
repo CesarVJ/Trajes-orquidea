@@ -1,3 +1,4 @@
+<?php require_once("../obtenerDatos.php")?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,11 +17,19 @@
 </head>
 
 <body>
+<?php
+
+if(!empty(trim($_POST["cantidad-articulos"])) & !empty(trim($_POST['precioFinal']))){
+	$cantidad = trim($_POST['cantidad-articulos']);
+	$total_pagar = trim($_POST['precioFinal']);
+	$articulo = trim($_GET['id']);
+}
+?>
 	<?php require_once("../obtenerDatos.php")?>
 	<div class="contenido-body">
 		<?php require_once("../componentes/menu.php") ?>
 		<h1 class="titulo-Catalogo">Trajes Orquidea</h1>
-		<div class="contenedor-general">
+		<div class="contenedor-general container">
 			<div class="contenedor-pago">
 				<h1 id="titulo">Tarjeta de Debito/Credito</h1>
 
@@ -46,12 +55,13 @@
 			</div>
 
 			<div class="mostrar-pago">
-				<h1>Total a pagar: <span id="total-pagar">$</span></h1>
+				<h1>Total a pagar: <?php echo $total_pagar;?><span id="total-pagar">$</span></h1>
 				<h1>Usted ha seleccionado: <span id="cantidad"></span></h1>
+				<h3><?php echo $producto->getNombre_producto();?> X <?php echo $cantidad;?> </h3>
 
 
-				<button class="boton">Regresar</button>
-				<button class="boton">Realizar pago</button>
+				<a href="#" onclick="window.history.go(-1); return false;"><button id="btn-regresar" class="btn btn-outline-danger btn-lg btn-block">Regresar</button></a>
+				<input type="submit" id="btn-comprar" class="btn btn-success btn-lg btn-block" value="Comprar Articulo(s)">
 			</div>
 		</div>
 
