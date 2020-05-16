@@ -27,7 +27,7 @@
 				        <input type="date" name="fecha_nacimiento" class="item" value="<?php echo $fecha_nacimiento; ?>">
 				        <input type="email" id="perfil-correo" name="correo" class="item" placeholder="Correo" value="<?php echo $correo; ?>" disabled>
 			        </div>	
-					<input type="text" name="direccion" class="item" placeholder="Direccion" value="<?php echo $correo; ?>">		
+					<input type="text" name="direccion" class="item" placeholder="Direccion" value="<?php echo $direccion; ?>">		
 			        <input type="tel" name="telefono" class="item" placeholder="271-000-00-00" value="<?php echo $telefono; ?>">
 			        <input type="password" name="contraseña" class="item contraseña-perfil" placeholder="Contraseña" value="<?php echo $contraseña; ?>">
 			        <input type="password" name="confirmar_contraseña" class="item contraseña-perfil" placeholder="Confirmar contraseña">
