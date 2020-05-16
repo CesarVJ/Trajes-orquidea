@@ -23,11 +23,10 @@
                 $sql = "INSERT INTO compras values(".($num_compras+1).",".$cantidad.",".$total.",'".$fechaCompra."','".$fechaLlegada."', 'pendiente', ".$_SESSION['id'].",".$producto.");";                
                 if ($conexion->query($sql) === TRUE) {
                   echo "Se realizo la compra";
+                  header('location: vista/CatalogoCliente.php?compra=exitosa');
                 } else {
                   echo "Error: ";
-                  header("location:javascript://history.go(-1)");
+                  header('location: vista/CatalogoCliente.php?compra=fallida');
                 }
-
-
     }
 ?>

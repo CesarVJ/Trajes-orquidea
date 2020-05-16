@@ -14,12 +14,33 @@
 
 <body>
 
-        <div class="contenido-body">
-            <?php require_once("../componentes/menu.php");?>
-            <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
-            <div class="container">
-                <div class="contenedor row">
-                    <?php
+    <div class="contenido-body">
+        <?php require_once("../componentes/menu.php");?>
+        <?php
+                if(isset($_GET['compra'])){
+                    if(trim($_GET['compra']) == 'exitosa'){?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Tu compra se ha realizado con exito</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <?php }else {?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>!Algo ha salido mal!, tu compra no se pudo realizar.</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <?php
+
+        }
+        }
+?>
+        <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
+        <div class="container">
+            <div class="contenedor row">
+                <?php
                         require('../modelo/Producto.php');
 
                         $producto = new Producto();
@@ -39,21 +60,21 @@
                             $producto->setNombre_producto($row["nombre_producto"]);
                             $producto->setDescripcion($row["descripcion"]);            
                     ?>
-                    <div class="contenedor-producto col-lg-4 col-md-6 col-sm-12">
-                        <img src="../img/imagenesProductos/<?php echo $producto->getImagen();?>" class="imagen-producto">
-                        <h3><?php echo $producto->getNombre_producto();?></h3>
-                        <p class="descripcion-corta"><?php echo $producto->getDescripcion();?></p>
-                        <a href="InformacionProducto.php?id=<?php echo $producto->getId_producto();?>">
+                <div class="contenedor-producto col-lg-4 col-md-6 col-sm-12">
+                    <img src="../img/imagenesProductos/<?php echo $producto->getImagen();?>" class="imagen-producto">
+                    <h3><?php echo $producto->getNombre_producto();?></h3>
+                    <p class="descripcion-corta"><?php echo $producto->getDescripcion();?></p>
+                    <a href="InformacionProducto.php?id=<?php echo $producto->getId_producto();?>">
                         <button class="btn btn-success boton" id="btn-comprar">Ver detalles</button></a>
-                    </div>
-                    <?php
+                </div>
+                <?php
 		                }
 	                ?>
-                </div>
             </div>
-            <?php require_once("../componentes/aside.html");?>
         </div>
-            <?php require_once("../componentes/footer.html");?>
+        <?php require_once("../componentes/aside.html");?>
+    </div>
+    <?php require_once("../componentes/footer.html");?>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
@@ -63,7 +84,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    <script src="https://account.snatchbot.me/script.js"></script><script>window.sntchChat.Init(109433)</script> 
+    <script src="https://account.snatchbot.me/script.js"></script>
+    <script>
+        window.sntchChat.Init(109433)
+    </script>
+
 </body>
 
 </html>

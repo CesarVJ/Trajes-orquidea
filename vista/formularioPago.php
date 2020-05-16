@@ -69,6 +69,7 @@ if(!empty(trim($_POST["cantidad-articulos"])) & !empty(trim($_POST['precioFinal'
 				<a href="#" onclick="window.history.go(-1); return false;"><button id="btn-regresar" class="btn btn-outline-danger btn-lg btn-block">Regresar</button></a>
 				<input type="submit" id="btn-comprar" class="btn btn-success btn-lg btn-block" value="Comprar Articulo(s)">
 </form>
+
 		</div>
 		<script src="../js/validaciones.js?v=<?php echo time(); ?>"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
