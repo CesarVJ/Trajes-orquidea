@@ -159,6 +159,39 @@ function mensajeError(texto) {
   let mensaje = document.querySelector("#mensaje-inicio");
   mensaje.innerHTML = texto;
 }
+
+function validarDatosPago() {
+  var titular = document.forms["form-pago"]["nombre-titular"].value;
+  var tarjeta = document.forms["form-pago"]["numero-tarjeta"].value;
+  var expiracion = document.forms["form-pago"]["fecha-expiracion"].value;
+  var codigo = document.forms["form-pago"]["codigo-seguridad"].value;
+
+  if (titular == "" || tarjeta == "" || expiracion == "" || codigo == "") {
+    let error = document.querySelector("#error-comprar");
+    error.style.display = "block";
+    let mensaje = document.querySelector("#error-comprar-mensaje");
+    mensaje.innerHTML = "Por favor, rellene todos los campos";
+    return false;
+  }
+
+  if (tarjeta.length != 16 || !esNumero(tarjeta)) {
+    let error = document.querySelector("#error-comprar");
+    error.style.display = "block";
+    let mensaje = document.querySelector("#error-comprar-mensaje");
+    mensaje.innerHTML = "Inserte un numero de tarjeta valido";
+    return false;
+  }
+
+  if (codigo.length != 3 || !esNumero(codigo)) {
+    let error = document.querySelector("#error-comprar");
+    error.style.display = "block";
+    let mensaje = document.querySelector("#error-comprar-mensaje");
+    mensaje.innerHTML = "Su codigo de seguridad es incorrecto";
+    return false;
+  }
+  return true;
+
+}
 /*
 var precio = document.getElementById("precio-total");
 var value = $(".cantidad").val();

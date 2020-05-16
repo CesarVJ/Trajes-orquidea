@@ -29,7 +29,7 @@ if(!empty(trim($_POST["cantidad-articulos"])) & !empty(trim($_POST['precioFinal'
 	<div class="contenido-body">
 		<?php require_once("../componentes/menu.php") ?>
 		<h1 class="titulo-Catalogo">Trajes Orquidea</h1>
-		<form class="contenedor-general container" method="post" action="pagoExitoso.php?id=<?php echo $articulo."&cantidad=".$cantidad."&total=".$total_pagar;?>">
+		<form id="form-pago" name="form-pago" class="contenedor-general container" method="post" action="../pagoExitoso.php?id=<?php echo $articulo."&cantidad=".$cantidad."&total=".$total_pagar;?>" onsubmit="return validarDatosPago()">
 			<div class="contenedor-pago">
 				<h1 id="titulo">Tarjeta de Debito/Credito</h1>
 
@@ -60,13 +60,26 @@ if(!empty(trim($_POST["cantidad-articulos"])) & !empty(trim($_POST['precioFinal'
 				<ul>
 				<li><h3><?php echo $producto->getNombre_producto();?> X <?php echo $cantidad;?> </h3></li>
 				</ul>
+				<div class="grupo-error" id="error-comprar">
+                    <img class="icono-error" src="../img/error.svg" alt="error">
+                    <p id ="error-comprar-mensaje" class="mensaje-error"> </p>
+                </div>
 
 
 				<a href="#" onclick="window.history.go(-1); return false;"><button id="btn-regresar" class="btn btn-outline-danger btn-lg btn-block">Regresar</button></a>
 				<input type="submit" id="btn-comprar" class="btn btn-success btn-lg btn-block" value="Comprar Articulo(s)">
 </form>
 		</div>
-
+		<script src="../js/validaciones.js?v=<?php echo time(); ?>"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
