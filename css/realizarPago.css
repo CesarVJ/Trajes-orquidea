@@ -56,3 +56,14 @@ body {
 #codigo-seguridad {
 	width: 30%;
 }
+
+.titulo-pago {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+#btn-regresar {
+	margin-top: 5rem;
+	margin-bottom: 1rem;
+
+}
