@@ -88,6 +88,7 @@
                 $contador=0;
                 while($row = $datos->fetch_assoc()){
                     $listaCompras[$contador] = new Compras();
+                    $listaCompras[$contador]->setId_compra($row["id_compra"]);
                     $listaCompras[$contador]->setCantidad($row["cantidad"]);
                     $listaCompras[$contador]->setTotal($row["total"]);
                     $listaCompras[$contador]->setFecha_compra($row["fecha_compra"]);

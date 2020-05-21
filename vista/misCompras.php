@@ -29,6 +29,27 @@
 ?>
     <div class="contenido-body">
         <?php require_once("../componentes/menu.php") ?>
+        <?php
+                if(isset($_GET['operacion'])){
+                    if(trim($_GET['operacion']) == 'cancelar'){?>
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		<strong>Su compra se ha cancelado con exito</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<?php }else {?>
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>!Algo ha salido mal!.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<?php
+
+        }
+        }
+?>
         <h1 class="titulo-Catalogo">Mis compras</h1>
         <div class="container">
             <div class="row">
@@ -45,11 +66,14 @@
                         <p><b>Comprado: </b><?php echo $listaCompras->getFecha_compra(); ?></p>
                         <p><b>Llega: </b><?php echo $listaCompras->getFecha_llegada(); ?></p>
                         <?php
+                            if($listaCompras->getEstado_compra() == "cancelado"){ ?>
+                                <a href="#" class="btn btn-secondary deshabilitado">Pedido cancelado</a>                            
+                            <?php }else{
                             if(strtotime($date) < strtotime($listaCompras->getFecha_llegada())){ ?>
-                                <a href="../cancelarPedido.php?id=<?php echo $listaCompras->getId_producto() ?>" class="btn btn-danger">Cancelar pedido</a>                            
+                                <a href="../cancelarPedido.php?id=<?php echo $listaCompras->getId_compra(); ?>" class="btn btn-danger">Cancelar pedido</a>                            
                         <?php }else{ ?>
                             <a href="#" class="btn btn-secondary deshabilitado">Pedido enviado</a>                            
-                        <?php    }
+                        <?php   } }
                         ?>                        
                     </div>
                 </div>
