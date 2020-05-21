@@ -16,7 +16,6 @@
 </head>
 <body>
 
-	<h1>Llego el hacker XD</h1>
     <div class="contenido-body">
         <?php require_once("../componentes/menu.php") ?>
         <h1 class="titulo-Catalogo">Contactanos</h1>

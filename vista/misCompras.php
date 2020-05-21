@@ -46,7 +46,7 @@
                         <p><b>Llega: </b><?php echo $listaCompras->getFecha_llegada(); ?></p>
                         <?php
                             if(strtotime($date) < strtotime($listaCompras->getFecha_llegada())){ ?>
-                                <a href="#" class="btn btn-danger">Cancelar pedido</a>                            
+                                <a href="../cancelarPedido.php?id=<?php echo $listaCompras->getId_producto() ?>" class="btn btn-danger">Cancelar pedido</a>                            
                         <?php }else{ ?>
                             <a href="#" class="btn btn-secondary deshabilitado">Pedido enviado</a>                            
                         <?php    }
