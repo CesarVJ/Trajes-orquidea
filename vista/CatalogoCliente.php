@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="../css/estilos.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../css/buscar.css?v=<?php echo time(); ?>">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <title>Trajes Orquidea</title>
 </head>
 
@@ -35,26 +36,21 @@
             </button>
         </div>
         <?php
-
         }
         }
 ?>
         <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
         <div class="container">
-        <form id="form-buscar" action="">
-            <input id="barra-busqueda" type="text" name="" id=""  placeholder="Buscar articulo">
-            <input id="btn-buscar" class="btn btn-outline-primary" type="submit" value="Buscar">
-        </form>
-            <div class="contenedor row">
-        <script>
-            $('#barra-busqueda').on("keyup input", function(){
-                console.log("Presionaste");
-            });
-        </script>
-            
-                <?php
+            <?php if (!isset($_GET['categoria'])){ ?>
+            <form id="form-buscar" action="">
+                <input id="barra-busqueda" type="text" name="" id="" placeholder="Buscar articulo">
+            </form>
+            <?php } ?>
+            <div class="catalogo">
+                <div id="resultados" class="contenedor row"></div>
+                <div id="resultados-generales" class="contenedor row">
+                    <?php
                         require('../modelo/Producto.php');
-
                         $producto = new Producto();
                         include '../modelo/AccesoDatos.php';
                         $conexion = abrirConexion();
@@ -72,18 +68,38 @@
                             $producto->setNombre_producto($row["nombre_producto"]);
                             $producto->setDescripcion($row["descripcion"]);            
                     ?>
-                <div class="contenedor-producto col-lg-4 col-md-6 col-sm-12">
-                    <img src="../img/imagenesProductos/<?php echo $producto->getImagen();?>" class="imagen-producto">
-                    <h3><?php echo $producto->getNombre_producto();?></h3>
-                    <p class="descripcion-corta"><?php echo $producto->getDescripcion();?></p>
-                    <a href="InformacionProducto.php?id=<?php echo $producto->getId_producto();?>">
-                        <button class="btn btn-success boton" id="btn-comprar">Ver detalles</button></a>
-                </div>
-                <?php
+                    <div class="contenedor-producto col-lg-4 col-md-6 col-sm-12">
+                        <img src="../img/imagenesProductos/<?php echo $producto->getImagen();?>"
+                            class="imagen-producto">
+                        <h3><?php echo $producto->getNombre_producto();?></h3>
+                        <p class="descripcion-corta"><?php echo $producto->getDescripcion();?></p>
+                        <a href="InformacionProducto.php?id=<?php echo $producto->getId_producto();?>">
+                            <button class="btn btn-success boton" id="btn-comprar">Ver detalles</button></a>
+                    </div>
+                    <?php
 		                }
 	                ?>
+                </div>
             </div>
         </div>
+        <script>
+            $('#barra-busqueda').on("keyup input", function () {
+                var inputVal = $(this).val();
+                var resultDropdown = $("#resultados");
+                var resultadosGenerales = $("#resultados-generales");
+                if (inputVal.length) {
+                    $.get("../buscarProducto.php", {
+                        term: inputVal
+                    }).done(function (data) {
+                        resultDropdown.html(data);
+                        resultadosGenerales.css("display", "none");
+                    });
+                } else {
+                    resultDropdown.empty();
+                    resultadosGenerales.css("display", "flex");
+                }
+            });
+        </script>
         <?php require_once("../componentes/aside.html");?>
     </div>
     <?php require_once("../componentes/footer.html");?>

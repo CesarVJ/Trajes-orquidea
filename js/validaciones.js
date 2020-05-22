@@ -40,6 +40,14 @@ function verificarDatosPerfil() {
     return false;
   }
 
+  if (telefono != "") {
+    if (telefono.length != 10 || !esNumero(telefono)) {
+      mensajeError.innerHTML = "El telefono proporcionado no es valido";
+      registro_error.style.display = "block";
+      return false;
+    }
+  }
+
   if (confirmar_contraseña != contraseña) {
     mensajeError.innerHTML = "Las contraseñas no coinciden.";
     registro_error.style.display = "block";
