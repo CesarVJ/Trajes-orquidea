@@ -8,6 +8,8 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/catalogo.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../css/estilos.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../css/buscar.css?v=<?php echo time(); ?>">
+
 
     <title>Trajes Orquidea</title>
 </head>
@@ -39,6 +41,10 @@
 ?>
         <h1 class="titulo-Catalogo">Trajes Orquidea</h1>
         <div class="container">
+        <form id="form-buscar" action="">
+            <input id="barra-busqueda" type="search" name="" id=""  placeholder="Buscar articulo">
+            <input id="btn-buscar" class="btn btn-outline-primary" type="submit" value="Buscar">
+        </form>
             <div class="contenedor row">
                 <?php
                         require('../modelo/Producto.php');

@@ -1,0 +1,49 @@
+#form-buscar {
+    text-align: right;
+    padding-right: 19%;
+}
+
+#barra-busqueda {
+    height: 36px;
+    margin-top: 5px;
+    width: 30%;
+    font-size: 1.3rem;
+    background-color: #24292E;
+    color: #fff;
+    padding: 0.7rem;
+    border-radius: 15px;
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+#barra-busqueda::placeholder {
+    color: #fff;
+}
+
+#btn-buscar {
+    margin-bottom: 6px;
+    width: 12%;
+}
+
+@media only screen and (max-width: 1300px) {
+
+    #form-buscar {
+        text-align: center;
+        padding: 0px;
+    }
+
+    #barra-busqueda {
+        width: 70%;
+        margin: 0px;
+    }
+
+    #btn-buscar {
+        width: 29%;
+
+    }
+
+
+}
