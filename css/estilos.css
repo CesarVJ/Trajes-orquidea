@@ -1,280 +1,262 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
 html,
 body {
-    height: 100%;
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .fondo {
-    background-image: url(../img/fondo4.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    right: 0;
-    display: block;
-    filter: grayscale(60%);
+  background-image: url(../img/fondo4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: block;
+  filter: grayscale(60%);
 }
 
 .contenedor-vestido {
-    text-align: center;
-    padding: 0px;
+  text-align: center;
+  padding: 0px;
 }
 
 #img-vestido {
-    width: 80%;
-    height: 90%;
-    margin: 10px auto;
-    border-radius: 5px;
-    box-shadow: -25px 13px 28px -10px rgba(0, 0, 0, 0.47);
+  width: 80%;
+  height: 90%;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: -25px 13px 28px -10px rgba(0, 0, 0, 0.47);
 }
 
 header {
-    background: black;
+  background: black;
 }
 
 .menu {
-    background-color: black;
-    width: 100%;
-    max-width: 100%;
-    align-items: center;
-    padding: 1.3rem;
+  background-color: black;
+  width: 100%;
+  max-width: 100%;
+  align-items: center;
+  padding: 1.3rem;
 }
 
 .menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .menu a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #menu-catalogo li ul {
-    display: none;
-    position: absolute;
-    padding: 0px;
+  display: none;
+  position: absolute;
+  padding: 0px;
 }
 
-#menu-catalogo li:hover>ul {
-    display: block;
+#menu-catalogo li:hover > ul {
+  display: block;
 }
 
 #menu-catalogo li ul li {
-    position: relative;
+  position: relative;
 }
 
 #menu-catalogo li ul li a:hover {
-    background-color: #ffbd69;
+  background-color: #ffbd69;
 }
 
 #menu-catalogo li ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 2.52rem;
-    background-color: #000;
-    margin-top: 0px;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 2.52rem;
+  background-color: #000;
+  margin-top: 0px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .nav {
-    width: 500px;
-    margin: 0px auto;
-    margin-top: 100px;
-    box-shadow: -4px -3px 21px 8px rgba(255, 255, 255, 0.2);
+  width: 500px;
+  margin: 0px auto;
+  margin-top: 100px;
+  box-shadow: -4px -3px 21px 8px rgba(255, 255, 255, 0.2);
 }
 
 #texto-cambiante {
-    margin-left: 75%;
+  margin-left: 75%;
 }
 
 #titulo-principal {
-    font-family: 'Poppins';
-    color: white;
-    font-weight: 800;
-    letter-spacing: 5px;
+  font-family: "Poppins";
+  color: white;
+  font-weight: 800;
+  letter-spacing: 5px;
 }
 
-
 #descripcion-principal {
-    font-family: 'Poppins';
-    color: white;
-    margin-top: 2rem;
-    margin-right: 10px;
-    font-weight: 400;
-    line-height: 1.7;
-    font-size: 1.3rem;
-    text-align: justify;
+  font-family: "Poppins";
+  color: white;
+  margin-top: 2rem;
+  margin-right: 10px;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 1.3rem;
+  text-align: justify;
 }
 
 #contenedor-login,
 #contenedor-registro {
-    width: 500px;
-    height: 100%;
-    margin: 0px auto;
-    background-color: #fff;
-    padding: 2% 2% 2% 2%;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: -4px -3px 21px 8px rgba(255, 255, 255, 0.2);
+  width: 500px;
+  height: 100%;
+  margin: 0px auto;
+  background-color: #fff;
+  padding: 2% 2% 2% 2%;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: -4px -3px 21px 8px rgba(255, 255, 255, 0.2);
 }
 
 #contenedor-registro {
-    padding-bottom: 0px;
-    padding-top: 10px;
+  padding-bottom: 0px;
+  padding-top: 10px;
 }
 
 .contenido {
-    position: relative;
-    left: 0;
-    right: 0;
-    z-index: 1;
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .content {
-    margin-top: 5.5rem;
+  margin-top: 5.5rem;
 }
 
 .contenido-principal {
-    margin-top: 6rem;
+  margin-top: 6rem;
 }
 
 #contenido-principal-registro {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .formulario {
-    width: 100%;
+  width: 100%;
 }
 
 /*Mensajes de error*/
 .grupo-error {
-    text-align: left;
-    margin: 1px 25px;
+  text-align: left;
+  margin: 1px 25px;
 }
 
 .mensaje-error {
-    color: red;
-    text-align: left;
+  color: red;
+  text-align: left;
 }
 
 .icono-error {
-    filter: invert(27%) sepia(51%) saturate(2878%) contrast(97%);
-    float: left;
+  filter: invert(27%) sepia(51%) saturate(2878%) contrast(97%);
+  float: left;
 }
 
 #error-correo,
 #error-contraseña,
 #error-registro,
 #error-inicio {
-    display: none;
+  display: none;
 }
 
 .item-inicio {
-    width: 90%;
-    font-size: 20px;
-    padding: 6px;
-    padding-left: 52px;
-    margin: 4px auto;
-    background-color: #ededed;
-    color: black;
-    border-radius: 5px;
+  width: 90%;
+  font-size: 20px;
+  padding: 6px;
+  padding-left: 52px;
+  margin: 4px auto;
+  background-color: #ededed;
+  color: black;
+  border-radius: 5px;
 }
 
 .icono {
-    width: 42px;
-    position: absolute;
-    margin-top: 5px;
-    margin-left: 5px;
+  width: 42px;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 .item-inicio:focus,
 .item:focus {
-    outline: 0px;
+  outline: 0px;
 }
 
 .boton {
-    display: block;
-    width: 95%;
-    padding: 8px;
-    background: #61d4b3;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    margin: 0px auto;
-    margin-bottom: 20px;
+  display: block;
+  width: 95%;
+  padding: 8px;
+  background: #61d4b3;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 0px auto;
+  margin-bottom: 20px;
 }
 
 .btn-iniciar {
-    margin-top: 20px;
-    background-color: #fb8d62;
+  margin-top: 20px;
+  background-color: #fb8d62;
 }
 
 .texto {
-    color: black;
-    font-size: 1.2rem;
-    font-family: 'Poppins', 'Lucida Sans';
-    text-align: left;
-    margin-left: 20px;
-    margin-bottom: 0px;
-    margin-top: 8px;
+  color: black;
+  font-size: 1.2rem;
+  font-family: "Poppins", "Lucida Sans";
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  margin-top: 8px;
 }
 
 #page-container {
-    position: relative;
-    min-height: 100%;
-    height: 100%;
+  position: relative;
+  min-height: 100%;
+  height: 100%;
 }
 
 #content-wrap {
-    padding-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .footer-index {
-    position: absolute;
-    background-color: #000;
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    height: 4rem;
-    flex-shrink: 0;
-
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  height: 4rem;
+  flex-shrink: 0;
 }
 
 footer {
-
-    background-color: #000;
-    color: #fff;
-    /*position: absolute;
+  background-color: #000;
+  color: #fff;
+  /*position: absolute;
     bottom: 0;*/
-    width: 100%;
-    text-align: center;
-    height: 4rem;
-    flex-shrink: 0;
+  width: 100%;
+  text-align: center;
+  height: 4rem;
+  flex-shrink: 0;
 
-    /*
+  /*
     bottom: 0;
     width: 100%;
     height: 70px;
@@ -290,73 +272,72 @@ footer {
 }
 
 #tel-contacto {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .icono-footer {
-    height: 30px;
-    margin-bottom: 0px;
-    margin-right: 1%;
+  height: 30px;
+  margin-bottom: 0px;
+  margin-right: 1%;
 }
 
 /*Formulario de registro*/
-input[type=date] {
-    width: 35%;
-    font-size: 1rem;
-    padding-left: 5px;
-    padding: 5px;
-    display: inline-block;
-    margin-right: 45px;
+input[type="date"] {
+  width: 35%;
+  font-size: 1rem;
+  padding-left: 5px;
+  padding: 5px;
+  display: inline-block;
+  margin-right: 45px;
 }
 
 #correo {
-    width: 45%;
-    display: inline-block;
+  width: 45%;
+  display: inline-block;
 }
 
 .item {
-    width: 90%;
-    font-size: 17px;
-    padding: 5px;
-    padding-left: 15px;
-    margin: 10px auto;
-    background-color: #ededed;
-    color: black;
-    box-sizing: border-box;
-    border-radius: 5px;
-    z-index: 100;
+  width: 90%;
+  font-size: 17px;
+  padding: 5px;
+  padding-left: 15px;
+  margin: 10px auto;
+  background-color: #ededed;
+  color: black;
+  box-sizing: border-box;
+  border-radius: 5px;
+  z-index: 100;
 }
 
 #cont-calendario {
-    position: relative;
+  position: relative;
 }
 
 #calendario {
-    position: absolute;
-    left: 38%;
-    margin-top: 8px;
-    width: 43px;
-    z-index: 1;
+  position: absolute;
+  left: 38%;
+  margin-top: 8px;
+  width: 43px;
+  z-index: 1;
 }
 
 /*Mensajes de error*/
 .grupo-error {
-    text-align: left;
-    margin: 1px 25px;
+  text-align: left;
+  margin: 1px 25px;
 }
 
 .mensaje-error,
 #error-agregar {
-    color: red;
-    text-align: left;
+  color: red;
+  text-align: left;
 }
 
 .icono-error {
-    filter: invert(27%) sepia(51%) saturate(2878%) contrast(97%);
-    float: left;
+  filter: invert(27%) sepia(51%) saturate(2878%) contrast(97%);
+  float: left;
 }
 
 #error-correo,
@@ -365,37 +346,29 @@ input[type=date] {
 #error-inicio,
 #error-agregar,
 #error-editar {
-    display: none;
+  display: none;
 }
 
-
-
-
 @media only screen and (max-width: 1000px) {
+  body {
+    text-align: center;
+  }
 
+  #img-vestido {
+    display: block;
+  }
 
+  .contenedor-texto {
+    text-align: center;
+  }
 
-    body {
-        text-align: center;
-    }
-
-    #img-vestido {
-        display: block;
-    }
-
-    .contenedor-texto {
-        text-align: center;
-    }
-
-    #texto-cambiante {
-        margin-left: 60%;
-    }
-
+  #texto-cambiante {
+    margin-left: 60%;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-
-    #texto-cambiante {
-        margin-left: 60%;
-    }
+  #texto-cambiante {
+    margin-left: 60%;
+  }
 }

@@ -8,20 +8,18 @@
     margin-top: 5px;
     width: 30%;
     font-size: 1.3rem;
-    background-color: #24292E;
-    color: #fff;
+    background-color: #fff;
     padding: 0.7rem;
     border-radius: 15px;
     outline: none !important;
     outline-width: 0 !important;
     box-shadow: none;
+    border-color: #00a1ab;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
 }
 
-#barra-busqueda::placeholder {
-    color: #fff;
-}
+#barra-busqueda::placeholder {}
 
 #btn-buscar {
     margin-bottom: 6px;

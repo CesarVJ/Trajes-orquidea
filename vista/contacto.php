@@ -15,20 +15,17 @@
     <title>Trajes Orquidea</title>
 </head>
 <body>
-
     <div class="contenido-body">
         <?php require_once("../componentes/menu.php") ?>
         <h1 class="titulo-Catalogo">Contactanos</h1>
         <div class="contacto container">
+        <h3>Al correo: <a href="mailto:trajes-orquidea@protonmail.com">trajes-orquidea@protonmail.com</a></h3>
         <h2>Puedes encontrarnos en :</h2>
         <iframe
 			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d943.0479397513191!2d-97.03538817084356!3d19.011269999195342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDAwJzQwLjYiTiA5N8KwMDInMDUuNCJX!5e0!3m2!1ses-419!2smx!4v1588188186987!5m2!1ses-419!2smx"
 			width="1100" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
             tabindex="0">
         </iframe>
-        </div>
-        <div class="preguntas-frecuentes container">
-            <h2>Preguntas frecuentes</h2>
         </div>
         </div>
     <?php include_once("../componentes/footer.html") ?>

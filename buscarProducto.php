@@ -1,5 +1,4 @@
 <?php
-
 require_once("modelo/AccesoDatos.php");
 $conexion = abrirConexion();
  
@@ -25,8 +24,6 @@ if(isset($_REQUEST["term"])){
                         <a href="InformacionProducto.php?id=<?php echo $row["id_producto"];?>">
                             <button class="btn btn-success boton" id="btn-comprar">Ver detalles</button></a>
                     </div>
-
-
                 <?php }
             } else{
                 echo "<h2>No se ha encontrado ningun producto</h2>";
@@ -35,7 +32,6 @@ if(isset($_REQUEST["term"])){
         }
     }
     mysqli_stmt_close($stmt);
-}
- 
+} 
 mysqli_close($conexion);
 ?>
