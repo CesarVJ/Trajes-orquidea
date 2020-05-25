@@ -25,11 +25,11 @@
                     mysqli_free_result($resultado);
                 }
                 echo "Se crea el insert en sql";
-                $consulta = "insert into producto(id_producto, nombre_producto, categoria, precio, descripcion, talla, imagen) values(?, ?, ?, ?, ?, ?, ?)";
+                $consulta = "insert into producto(nombre_producto, categoria, precio, descripcion, talla, imagen) values(?, ?, ?, ?, ?, ?)";
                 if($statement = mysqli_prepare($conexion, $consulta)){   
                     echo "SFunciono";   
                     //Se asignan los datos del formulario a un objeto de tipo Producto          
-                    $producto->setId_producto($num_productos + 1);
+                    #$producto->setId_producto($num_productos + 1);
                     $producto->setNombre_producto(trim($_POST["nombre-producto"]));
                     $producto->setCategoria(trim($_POST["categoria"]));
                     $producto->setPrecio(trim($_POST["precio"]));
@@ -40,7 +40,7 @@
                     echo $producto->getImagen();
 
                     #Se inserta el nuevo producto
-                    mysqli_stmt_bind_param($statement, "issdsis",$producto->getId_producto(), $producto->getNombre_producto(), $producto->getCategoria(), $producto->getPrecio(), $producto->getDescripcion(), $producto->getTalla(), $producto->getImagen());        
+                    mysqli_stmt_bind_param($statement, "ssdsis", $producto->getNombre_producto(), $producto->getCategoria(), $producto->getPrecio(), $producto->getDescripcion(), $producto->getTalla(), $producto->getImagen());        
                     if(mysqli_stmt_execute($statement)){
                         header("location: ../vista/CatalogoAdmin.php");
 
